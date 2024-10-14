@@ -66,6 +66,6 @@ initialTodos.forEach((item) => {
   todosList.append(todo);
 });
 
-// enable validation
+
 const newTodoValidator = new FormValidator(validationConfig, addTodoForm);
 newTodoValidator.enableValidation();
