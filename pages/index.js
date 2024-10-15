@@ -58,6 +58,10 @@ if (isValid) {
   const todo = generateTodo(values);
   todosList.append(todo);
   closeModal(addTodoPopup);
+  // reset form validation and disable submit button after successful submission
+  newTodoValidator.resetValidation();
+  // reset form fields
+  addTodoForm.reset();
 }
 });
 

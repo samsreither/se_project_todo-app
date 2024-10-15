@@ -13,7 +13,7 @@
 
 .button_disabled {
   pointer-events: none;
-  background-color: #5877e74d;
+  background-color: gray;
 }
 
 .button_action_add {
