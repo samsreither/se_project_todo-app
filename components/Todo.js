@@ -41,10 +41,6 @@ class Todo {
 
         todoNameEl.textContent = this._data.name;
 
-        const todoDeleteBtn = this._todoElement.querySelector(".todo__delete-btn");
-        this._todoCheckboxEl = this._todoElement.querySelector(".todo__completed");
-        this._todoLabel = this._todoElement.querySelector(".todo__label");
-
         if (this._data.date) {
             const dueDate = new Date(this._data.date);
             if (!isNaN(dueDate)) {
