@@ -34,20 +34,6 @@ addTodoCloseBtn.addEventListener("click", () => {
 addTodoForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
 
-  // validate input fields
-  const inputElements = Array.from(addTodoForm.querySelectorAll(validationConfig.inputSelector));
-  let isValid = true;
-
-  inputElements.forEach((inputElement) => {
-    if (!inputElement.validity.valid) {
-      newTodoValidator._showInputError(inputElement);
-      isValid = false;
-    } else {
-      newTodoValidator._hideInputError(inputElement);
-    }
-  });
-
-// continue with adding todo if the form is valid
 if (isValid) {
   const name = evt.target.name.value;
   const dateInput = evt.target.date.value;
@@ -58,10 +44,7 @@ if (isValid) {
   const todo = generateTodo(values);
   todosList.append(todo);
   closeModal(addTodoPopup);
-  // reset form validation and disable submit button after successful submission
   newTodoValidator.resetValidation();
-  // reset form fields
-  addTodoForm.reset();
 }
 });
 
