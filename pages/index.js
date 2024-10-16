@@ -34,7 +34,7 @@ addTodoCloseBtn.addEventListener("click", () => {
 addTodoForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
 
-if (isValid) {
+if (newTodoValidator.isValid) {
   const name = evt.target.name.value;
   const dateInput = evt.target.date.value;
   const date = new Date(dateInput);

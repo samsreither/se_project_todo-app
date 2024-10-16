@@ -85,6 +85,10 @@ class FormValidator {
   });
         this._setEventListeners();
     }
+
+    isValid() {
+      return this._inputList.every((inputElement) => inputElement.validity.valid);
+    }
 }
 
 export default FormValidator;
